@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>split string</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <script>
+        var getCamelcaseString = function (str) {
+            let dj = str.split('-');
+            let result = [];
+
+            for (let i = 1; i < dj.length; i++) {
+                result.push(dj[i].charAt(0).toUpperCase() + dj[i].slice(1));
+            }
+            console.log(dj[0] + result.join(''));
+        }
+
+        getCamelcaseString('render-ui-template');
+        getCamelcaseString('render-ui-template-and-more');
+        getCamelcaseString('render-ui-template-kol');
+        getCamelcaseString('render-ui');
+    </script>
+</body>
+
+</html>
